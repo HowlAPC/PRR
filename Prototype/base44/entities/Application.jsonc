@@ -1,0 +1,74 @@
+{
+  "name": "Application",
+  "type": "object",
+  "properties": {
+    "email": {
+      "type": "string"
+    },
+    "first_name": {
+      "type": "string"
+    },
+    "middle_name": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "mobile": {
+      "type": "string"
+    },
+    "course_id": {
+      "type": "string"
+    },
+    "course_name": {
+      "type": "string"
+    },
+    "answers": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "submitted",
+        "under_review",
+        "qualified",
+        "paid",
+        "enrolled",
+        "rejected"
+      ],
+      "default": "submitted"
+    },
+    "payment_bank": {
+      "type": "string"
+    },
+    "payment_account_name": {
+      "type": "string"
+    },
+    "payment_account_last4": {
+      "type": "string"
+    },
+    "payment_reference": {
+      "type": "string"
+    },
+    "payment_amount": {
+      "type": "number"
+    },
+    "paid_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "student_email": {
+      "type": "string"
+    },
+    "transferred_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "email",
+    "first_name",
+    "last_name"
+  ]
+}
